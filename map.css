@@ -1,0 +1,85 @@
+body, html {
+       height: 100%;
+       margin: 0;
+       padding: 0;
+       justify-content: center;
+     }
+     
+     #map {
+       height: 100%;
+       width: 100%;
+     }
+
+
+.button1{
+  position: fixed;
+  font-family: "Roboto",sans-serif;
+  font-size: 10 px;
+  font-weight: bold;
+  bottom: 40px;
+  right: 50px;
+  width: 100px;
+  height: 80px;
+  position:fixed;
+  border :1 px solid rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+  color:#fff;
+  background: #0000ff;
+  border-radius: 50%;
+  transition: all 0.5s;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+  z-index: 9999;
+}
+
+.button1:hover, .button1:focus ,.button1.active {
+       box-shadow: 0 0 20px rgba(0,0,0,0.5);
+       color:#fff;
+       
+       background: #6363ff;
+       -webkit-transform: scale(1.1);
+       transform: scale(1.1);
+       transition: all 0.5s;
+       
+     }
+     
+     
+     .search-bar {
+       position: fixed;
+       top: 30px;
+       left: 50px;
+       align-items: center;
+       height: 30px;
+       display: flex;
+       cursor: pointer;
+       padding: 10px 20px;
+       background: #ffffff;
+       border-radius: 30px;
+       align-items: center;
+       box-shadow: 0 10px 25px rgba(59, 89, 255, 0.233) ;
+       z-index: 9999;
+     }
+     .search-bar:hover input{
+       width: 350px;
+     }
+
+     .search-bar input{
+       width: 0;
+       outline: none;
+       border: none;
+       font-weight: 500;
+       transition: 0.7s;
+       background: transparent;
+     }
+
+.search-bar .fas{
+       color: #1919ff;
+       font-size: 20px;
+}

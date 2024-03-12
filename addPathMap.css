@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap');
+
+
+body, html {
+       height: 100%;
+       margin: 0 ;
+       padding: 0 ;
+       justify-content: center;
+       
+     }
+     
+     #map {
+       
+       
+       height: 100%;
+       width: 100%;
+     }
+     
+     .lat {
+      width: 8rem;
+      height: 2rem;
+      position: fixed;
+      bottom: 5rem;
+      right: 1rem;
+      font-size: small;
+      font-weight: bold;
+      font-family:'Roboto',sans-serif;
+      color: rgba(20, 20, 155, 0.904);
+      border-radius: 1rem;
+      border-style: solid;
+      border-color: rgba(22, 22, 170, 0.781);
+      z-index: 9999;
+      box-shadow: 0 0 10rem rgba(11, 0, 109, 0.4);
+      transition: all 0.4s;
+      transition-duration: 0.3s;
+      transition-property: box-shadow, transform;
+     }
+     .lat:hover{
+      transform: scale(1.5);
+      right: 2.5rem;
+      box-shadow: 0 0 2rem rgba(11, 0, 109, 0.4);
+      transition: all 0.4s;
+     }
+      
+     .lng{
+      width: 8rem;
+      height: 2rem;
+      position: fixed;
+      bottom: 2rem;
+      right: 1rem;
+      font-size: small;
+      font-weight: bold;
+      font-family:'Roboto',sans-serif;
+      color: rgba(20, 20, 155, 0.904);
+      border-radius: 1rem;
+      border-style: solid;
+      border-color: rgba(22, 22, 170, 0.781);
+      z-index: 9999;
+      box-shadow: 0 0 10rem rgba(11, 0, 109, 0.4);
+      transition: all 0.4s;
+      transition-duration: 0.3s;
+      transition-property: box-shadow, transform;
+     }
+     .lng:hover {
+      transform: scale(1.5);
+
+      right: 2.5rem;
+      box-shadow: 0 0 2rem rgba(11, 0, 109, 0.4);
+      transition: all 0.4s;
+     }
+     #submit{
+      position: fixed;
+      right: 2rem;
+      bottom: 11rem;
+      width: 5rem;
+      height: 3rem;
+      font-family: "Lateef", serif;
+      font-size: 1rem;
+      border-radius: 5rem;
+      border-style: none;
+      background-color: rgb(22, 22, 170);
+      color: azure;
+      z-index: 9999;
+      padding: 0rem;
+      text-align: center;
+      transition: all 0.5s;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 0 10rem rgba(11, 0, 109, 0.4);
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+      -webkit-transition-property: box-shadow, transform;
+      transition-property: box-shadow, transform;
+     }
+     #submit:hover, #submit:focus  {
+      box-shadow: 0 0 2rem rgba(11, 0, 109, 0.4);
+      background: #6363ff;
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      transition: all 0.6s;
+      
+    }
+    #hover-text {
+      right: 1rem;
+      bottom: 8.4rem;
+      position: fixed;
+      background-color: rgb(0, 0, 44);
+      font-size:medium;
+      font-family:"Lateef", serif;
+      padding: 0.5rem;
+      color: #fff;
+      border-radius: 0.5rem;
+      visibility:hidden ;
+      z-index: 9999;
+    }
+    
+    
+    .pathRow {
+      position: absolute;
+       display: table;
+       right: 1rem ;
+       top: 2rem ;
+       width:40% ;
+       height:6%;
+       background: transparent;
+       background-color: rgb(23, 23, 212);
+       padding: 2px 0;
+       color: #fff;
+       font-weight:bold;
+       box-shadow: 0 2px 4px 0 rgba(0, 0, 141, 0.5);
+       z-index: 9999;
+       border-radius: 2px;
+    }
+    .pathCell{
+      position: relative;
+       display: table-cell;
+       width: 40%;
+       font-size: large;
+       font-family: "Lateef", serif ;
+       text-align: center;
+       z-index: 9999;
+       border-left: 1px solid #d3f8f7ea;
+       border-right: 1px solid #d3f8f7ea;
+       vertical-align: middle;
+ 
+    }
+    
+    .mapContainer{
+      margin: auto;
+      right:1rem ;
+      top:2rem;
+      z-index: 9999;
+      position: relative;
+    }
+    #dataContainer{
+      position: relative;
+      height: 60%;
+      overflow-y:hidden;
+      white-space:nowrap;
+      z-index: 9999;
+      touch-action: pan-y;
+      user-select:text;
+      cursor: pointer;
+      transition: transform 0.2s ease-out;
+    }
+    .dataRow {
+      position: absolute;
+       display: table;
+       right: 1rem ;
+       top: 2rem ;
+       width:40% ;
+       font-family: "Lateef", serif ;
+       background: transparent;
+       background-color: #fff;
+       padding: 2px 0;
+       margin: auto;
+       color: #040491;
+       font-size: 15px ;
+       font-weight: bold;
+       box-shadow: 0 2px 4px 0 rgba(0, 0, 141, 0.5);
+       z-index: 9999;
+       border-radius: 2px;
+    }
+    .inputLat {
+      position: relative;
+       display: table-cell;
+       width: 50%;
+       text-align: center;
+       z-index: 9999;
+       margin: 2px;
+       padding: 2px;
+       background-color: #fff;
+       border-left: 1px solid #2424e76c;
+       border-right: 1px solid #2424e76c;
+       vertical-align: middle;
+       border-radius: 2px;
+       box-shadow: 0 2px 4px 0 rgba(2, 2, 216, 0.5);
+      
+    }
+    .inputLng {
+      position: relative;
+      display: table-cell;
+      width: 50%;
+      text-align: center;
+      background-color: #fff;
+      z-index: 9999;
+      margin: 2px;
+      padding: 2px;
+      border-left: 1px solid #2424e76c;
+      border-right: 1px solid #2424e76c;
+      vertical-align: middle;
+      border-radius: 2px;
+       box-shadow: 0 2px 4px 0 rgba(2, 2, 216, 0.5);
+    }
+    #back{
+      position: fixed;
+      right: 10rem;
+      bottom: 3rem;
+      width: 3rem;
+      height: 3rem;
+      font-family: "Lateef", serif;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5rem;
+      border-style: none;
+      background-color: rgb(255, 255, 255);
+      color: rgb(27, 41, 233);
+      z-index: 9999;
+      padding: 0rem;
+      text-align: center;
+      transition: all 0.3s;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1px solid blue;
+      box-shadow: 0 0 8rem rgba(26, 9, 177, 0.4);
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-property: box-shadow, transform;
+      transition-property: box-shadow, transform;
+    }
+    #back:hover ,#back:focus {
+     
+        box-shadow: 0 0 2rem rgba(21, 3, 175, 0.4);
+        background: #6494e0;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: all 0.3s;
+        color: #fff;
+        border: 1px solid #fff;
+    }
+    #hover-back {
+      right: 13.2rem;
+      bottom: 3.2rem;
+      position: fixed;
+      background-color: rgb(0, 0, 44);
+      font-size:medium;
+      font-family:"Lateef", serif;
+      padding: 0.5rem;
+      color: #fff;
+      border-radius: 0.5rem;
+      visibility:hidden ;
+      z-index: 9999;
+    }
+    

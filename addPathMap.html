@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>  Adding Path </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="addPathMap.css">
+  </head>
+  
+  <body>
+       <div id="map">
+       <div class="add-path">
+        <form action="">
+          
+          <input class="lat" id="lat" type="text" value="" readonly maxlength="20" />
+          <input class="lng" id="lng" type="text" value="" readonly maxlength="20"/>
+          <input id="submit"  type="submit" name="Add" value="إضافة"  />
+          <div id="hover-text">اضافة المسار إلى الخريطة </div>
+          <div id="hover-back">حذف النقطة الأخيرة</div>
+        </form>
+         
+       </div>
+       <div id="dataContainer">
+         <div class="pathRow">
+          <div class="pathCell">
+            <p class="t1"> خط الطول </p>
+          </div>
+          <div class="pathCell">
+            <p class="t1">خط العرض</p>
+          </div>
+        </div>
+       </div>
+       <button id="back">تراجع</button>
+       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="addPathMap.js"></script>
+    </div>
+</body>
+</html>
