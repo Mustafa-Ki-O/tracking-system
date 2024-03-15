@@ -10,8 +10,9 @@
   </head>
   
   <body>
-       <div id="map">
-       <div class="add-path">
+       <div id="map"></div>
+       <div class="add-path"><button id="back">تراجع</button>
+        
         <form action="">
           
           <input class="lat" id="lat" type="text" value="" readonly maxlength="20" />
@@ -22,7 +23,11 @@
         </form>
          
        </div>
+       
        <div id="dataContainer">
+        <button id="down"><i class="fas fa-arrow-down"></i></button>
+        <button id="up"><i class="fas fa-arrow-up"></i></button>
+        <div class="parentContainer"></div>
          <div class="pathRow">
           <div class="pathCell">
             <p class="t1"> خط الطول </p>
@@ -31,10 +36,11 @@
             <p class="t1">خط العرض</p>
           </div>
         </div>
-       </div>
-       <button id="back">تراجع</button>
+       
+       
        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="addPathMap.js"></script>
-    </div>
+    
+    
 </body>
 </html>
